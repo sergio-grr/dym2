@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f69714;
+    color: #333;
+    padding: 20px;
+}
+
+.menu-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #d0d0d0;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    max-width: 250px;
+    height: auto;
+}
+
+h2 {
+    margin-bottom: 30px;
+}
+
+.menu-title {
+    font-size: 22px;
+    color: #ffffff;
+    background-color: #2b695e;
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 20px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.menu {
+    margin-bottom: 50px;
+}
+
+ul {
+    list-style: none;
+    font-size: 18px;
+}
+
+ul li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.dish-name {
+    font-weight: bold;
+    flex: 1;
+}
+
+.price {
+    font-weight: bold;
+    color: #2b695e;
+}
+
+.dots {
+    flex: 1;
+    border-bottom: 1px dotted #333;
+    margin: 0 10px;
+}
+
+.arroz-info {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.arroz-info p {
+    margin-bottom: 15px; 
+}
+
+.arroz-info ul {
+    padding-left: 20px;
+    list-style-type: disc;
+    font-size: 14px;
+}
+
+.arroz-info ul li {
+    margin-bottom: 5px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 16px;
+}
+
+footer p {
+    margin-bottom: 5px;
+    color: #2b695e;
+}
+
+footer p:last-child {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Media Queries para hacer el diseño responsive */
+@media (max-width: 768px) {
+    .menu-container {
+        padding: 20px;
+    }
+
+    ul li {
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .dish-name, .price {
+        font-size: 16px;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .dots {
+        display: none; /* Eliminamos las líneas punteadas para pantallas pequeñas */
+    }
+
+    .logo img {
+        max-width: 180px;
+    }
+
+    .menu-title {
+        font-size: 20px;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    ul {
+        font-size: 16px;
+    }
+
+    .arroz-info {
+        font-size: 12px;
+    }
+}

@@ -48,3 +48,28 @@ window.onload = function() {
         }
     }
 };
+
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuSection = document.getElementById("menu");
+        const waveLines = document.createElement("div");
+        waveLines.id = "wave-lines";
+        menuSection.appendChild(waveLines);
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Si el #menu está en la pantalla, mostramos las líneas onduladas
+                    waveLines.style.display = 'block';
+                    waveLines.style.animation = 'wave 5s linear infinite, fadeIn 2s forwards';
+                } else {
+                    // Si el #menu sale de la pantalla, disolvemos las líneas
+                    waveLines.style.animation = 'fadeOut 2s forwards';
+                }
+            });
+        }, { threshold: 0.5 });
+
+        observer.observe(menuSection);
+    });
+

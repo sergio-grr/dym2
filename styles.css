@@ -21,7 +21,7 @@ body {
 }
 
 /* Estilos de encabezados */
-h1, h2, h3 {
+h1, h2  {
     color: var(--primary-color);
 }
 
@@ -74,6 +74,7 @@ h1, h2, h3 {
     text-align: center;
     background-color: var(--accent-color);
     padding: 40px 20px;
+  
 }
 
 #menu h3 {
@@ -292,3 +293,5 @@ footer p {
         max-width: 100px;
     }
 }
+
+

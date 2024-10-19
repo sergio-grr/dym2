@@ -1,3 +1,4 @@
+/* Estilos globales */
 * {
     margin: 0;
     padding: 0;
@@ -5,34 +6,21 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #f69714;
     color: #333;
     padding: 20px;
 }
 
-.menu-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 1px solid #d0d0d0;
-}
-
-header {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
+/* Logo y encabezado */
 .logo img {
     max-width: 250px;
     height: auto;
 }
 
-h2 {
-    margin-bottom: 30px;
+header {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .menu-title {
@@ -46,16 +34,24 @@ h2 {
     font-weight: bold;
 }
 
-.menu {
-    margin-bottom: 50px;
+/* Contenedor principal */
+.menu-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #d0d0d0;
 }
 
-ul {
+/* Estilos del menú */
+.menu ul {
     list-style: none;
     font-size: 18px;
 }
 
-ul li {
+.menu ul li {
     display: flex;
     justify-content: space-between;
     margin-bottom: 12px;
@@ -99,23 +95,16 @@ ul li {
     margin-bottom: 5px;
 }
 
-footer {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 16px;
-}
-
-
 /* Sección de contacto */
 #contacto {
-    background-color: var(--accent-color);
+    background-color: #f69714;
     padding: 60px 20px;
     text-align: center;
 }
 
 #contacto h2 {
     font-size: 2.5rem;
-    color: var(--primary-color);
+    color: #2b695e;
     margin-bottom: 30px;
 }
 
@@ -129,30 +118,25 @@ footer {
 .contact-info li {
     font-size: 1.2rem;
     margin-bottom: 15px;
-    color: var(--secondary-color);
+    color: #333;
 }
 
 .contact-info strong {
-    color: var(--primary-color);
+    color: #2b695e;
 }
 
 .contact-info a {
-    color: var(--secondary-color);
+    color: #333;
     text-decoration: none;
 }
 
 .contact-info a:hover {
     text-decoration: underline;
 }
-.social-media{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-radius: 20px;
-    background-color: white;
-}
+
 .social-media h3 {
     font-size: 1.8rem;
-    color: var(--primary-color);
+    color: #2b695e;
     margin-bottom: 20px;
 }
 
@@ -161,25 +145,23 @@ footer {
     margin: 0 15px;
 }
 
-.social-icon {
-    width: 50px;
-    height: 50px;
-    transition: transform 0.3s, opacity 0.3s;
-}
-
-.social-icon:hover {
-    transform: scale(1.1);
-    opacity: 0.8;
-}
 
 
 /* Footer */
 footer {
     text-align: center;
     padding: 20px 0;
-    background-color: var(--accent-color);
+    background-color: #ffffff;
     color: black;
     border-radius: 0 0 10px 10px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease-in-out;
+}
+
+footer.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 footer p {
@@ -187,53 +169,47 @@ footer p {
     font-size: 1rem;
 }
 
+/* Feedback visual en interacciones */
+a, button {
+    transition: all 0.3s ease;
+}
 
-/* Media Queries para hacer el diseño responsive */
+
+/* Estilos responsivos */
 @media (max-width: 768px) {
     .menu-container {
         padding: 20px;
     }
 
-    ul li {
-        display: block;
-        text-align: center;
-        margin-bottom: 20px;
-    }
 
     .dish-name, .price {
-        font-size: 16px;
-        display: block;
-        margin-bottom: 5px;
+        font-size: 1rem;
     }
 
-    .dots {
-        display: none; /* Eliminamos las líneas punteadas para pantallas pequeñas */
+    .arroz-info {
+        font-size: 0.9rem;
     }
 
-    .logo img {
-        max-width: 180px;
-    }
-
-    .menu-title {
-        font-size: 20px;
-        padding: 6px 12px;
+    #contacto, footer {
+        padding: 40px 20px;
     }
 }
 
 @media (max-width: 480px) {
-    .menu-container {
-        padding: 15px;
+    .menu-title {
+        font-size: 1.5rem;
     }
 
-    h2 {
-        font-size: 18px;
-    }
-
-    ul {
-        font-size: 16px;
+    .menu ul {
+        font-size: 1rem;
     }
 
     .arroz-info {
-        font-size: 12px;
+        font-size: 0.8rem;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
     }
 }

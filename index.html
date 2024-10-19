@@ -4,52 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delicias y Manjares</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Pantalla de carga con el logo -->
     <div id="splash-screen">
         <img src="assets/logo.webp" alt="Delicias y Manjares Logo" class="splash-logo">
     </div>
 
-    <!-- Contenido principal de la página -->
-    <div id="main-content">
-        <!-- Logo dentro de un contenedor blanco -->
+    <div id="main-content" style="display: none; opacity: 0;">
+
         <div class="logo-container">
-            <img src="./assets/logo.webp" alt="Delicias y Manjares Logo">
+            <img src="assets/logo.webp" alt="Delicias y Manjares Logo">
         </div>
 
         <div class="text-center" id="container2">
-            <div class="text-center border-bottom">
+            <div class="text-center border-bottom" data-aos="fade-up">
                 <br>
                 <h1 class="display-4 fw-bold text-body-emphasis">Comida casera</h1>
                 <div class="col-lg-6 mx-auto">
-                    <p class="lead mb-4">Sumérgete en un universo de sabores auténticos donde cada bocado es una oda a la
-                        sencillez y la excelencia.
-                        Disfruta de platos recién elaborados con ingredientes de primera calidad, cultivados con mimo y
-                        seleccionados con esmero en los campos y huertos de nuestra tierra.</p>
+                    <p class="lead mb-4">Sumérgete en un universo de sabores auténticos donde cada bocado es una oda a la sencillez y la excelencia.
+                    Disfruta de platos recién elaborados con ingredientes de primera calidad, cultivados con mimo y seleccionados con esmero en los campos y huertos de nuestra tierra.</p>
                 </div>
                 <div>
                     <div class="container px-5">
-                        <img src="assets/encabezado.png" class="img-fluid rounded-3 shadow-lg mb-4" alt="Platos de comida casera" width="700"
-                            height="500" loading="lazy">
+                        <img src="assets/encabezado.png" class="img-fluid rounded-3 shadow-lg mb-4" alt="Platos de comida casera" width="700" height="500" data-aos="zoom-in">
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Sección del menú con imagen que abre un modal al hacer clic -->
-        <section id="menu">
+        <section id="menu" data-aos="fade-up">
             <h3>Descubre nuestros platos para hoy:</h3>
             <section class="recuadroMenu">
                 <img id="menuDiario" src="assets/menu.jpg" alt="Menú Diario">
             </section>
         </section>
-        
 
-
-        <!-- Modal oculto que se muestra al hacer clic en la imagen -->
         <div id="modal" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
@@ -57,43 +56,50 @@
             </div>
         </div>
 
-        <!-- Sección Por Encargo mejorada -->
         <section id="encargo">
             <div class="encargo-content">
                 <h2>Por Encargo</h2>
                 <h3>¿Tienes un evento especial?</h3> <br>
                 <p>Consulta nuestro menú por encargo</p>
                 <br>
-                   <a href="porEncargo.html">Aquí</a>
+                <a href="porEncargo.html">Aquí</a>
             </div>
         </section>
 
-        <!-- Sección de contacto con iconos SVG -->
-        <section id="contacto">
+        <section id="contacto" data-aos="fade-up">
             <h2>Contacto</h2>
             <ul class="contact-info">
                 <li><strong>Teléfono:</strong> 681 88 39 31</li>
                 <li><strong>Email:</strong> <a href="mailto:deliciasymanjarex@gmail.com">deliciasymanjarex@gmail.com</a></li>
                 <li><strong>Dirección:</strong> Avd. Ruta de la Plata, 26, Cáceres</li>
             </ul>
+
+            <div class="mapa-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6159.7592010046355!2d-6.3922077249031775!3d39.472048612594904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd15dfd75a53b26d%3A0xa5176ce2019fa7cc!2sDelicias%20%26%20ManjarEx!5e0!3m2!1ses!2ses!4v1729331844555!5m2!1ses!2ses" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
             <div class="social-media">
                 <h3>Redes Sociales</h3>
                 <a href="https://www.facebook.com/people/Delicias-Manjarex/61558684268838/" target="_blank">
-                    <img src="./assets/svg/facebook.svg" alt="Facebook" class="social-icon">
+                    <img src="assets/svg/facebook.svg" alt="Facebook" class="social-icon">
                 </a>
                 <a href="https://www.instagram.com/deliciasymanjarex/" target="_blank">
-                    <img src="./assets/svg/instagram.svg" alt="Instagram" class="social-icon">
+                    <img src="assets/svg/instagram.svg" alt="Instagram" class="social-icon">
                 </a>
             </div>
         </section>
-        
 
         <footer>
             <p>&copy; 2024 Delicias y Manjares. Todos los derechos reservados.</p>
         </footer>
     </div>
 
-    <!-- Script para el modal y el splash screen -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
     <script src="script.js"></script>
+
 </body>
 </html>

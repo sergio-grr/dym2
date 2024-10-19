@@ -4,13 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carta por Encargo - Delicias & ManjarEx</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
     <link rel="stylesheet" href="porEncargo.css">
+
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
-    <div class="menu-container">
+
+    <div class="menu-container" data-aos="fade-up">
         <header>
             <div class="logo">
-              <a href="index.html"> <img src="assets/logo.webp" alt="Delicias & ManjarEx Logo"></a> 
+                <a href="index.html"><img src="assets/logo.webp" alt="Delicias & ManjarEx Logo"></a>
             </div>
             <h2 class="menu-title">CARTA POR ENCARGO</h2>
         </header>
@@ -29,7 +42,7 @@
                 <li><span class="dish-name">Arroz Mixto</span><span class="price">12€</span></li>
             </ul>
 
-            <div class="arroz-info">
+            <div class="arroz-info" data-aos="fade-up" data-aos-delay="200">
                 <p><strong>Información sobre los arroces:</strong></p>
                 <ul>
                     <li>Mínimo para 2 personas (900gr aprox)</li>
@@ -40,14 +53,12 @@
             </div>
         </section>
 
-    
-
     </div>
-       <!-- Sección de contacto con iconos SVG -->
-       <section id="contacto">
+
+    <section id="contacto" data-aos="fade-up">
         <h2>Contacto</h2>
         <ul class="contact-info">
-            <li><strong>Teléfono:</strong>681 88 39 31</li>
+            <li><strong>Teléfono:</strong> 681 88 39 31</li>
             <li><strong>Email:</strong> <a href="mailto:deliciasymanjarex@gmail.com">deliciasymanjarex@gmail.com</a></li>
             <li><strong>Dirección:</strong> Avd. Ruta de la Plata, 26, Cáceres</li>
         </ul>
@@ -61,7 +72,18 @@
             </a>
         </div>
     </section>
+
     <footer>
         <p>&copy; 2024 Delicias y Manjares. Todos los derechos reservados.</p>
-    </footer></body>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="porEncargo.js"></script>
+
+</body>
 </html>
